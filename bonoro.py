@@ -31,7 +31,7 @@ if __name__ == "__main__":
                         api.retweet(status.id)
                         indice = not indice
                     except tweepy.TweepError as e:
-                        print(e.reason)
+                        print(e.reason)                  
             
         myStreamListener = MyStreamListener()
         myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
