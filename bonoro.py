@@ -13,7 +13,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 indice = False
-textos = ["Manda salve pro 3s2, Presidente @jairbolsonaro\nSomos fãs do mito", "Somos muito fãs do excelentíssimo Presidente @jairbolsonaro\nManda salve pro 3S2, mito"]
+textos = ["Somos muito fãs do excelentíssimo Presidente @jairbolsonaro\nManda salve pro 3S2, mito", "Manda salve pro 3s2, Presidente @jairbolsonaro\nSomos fãs do mito"]
 print(api.me())        
                     
 if __name__ == "__main__":
