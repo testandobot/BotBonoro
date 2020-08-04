@@ -21,6 +21,7 @@ if __name__ == "__main__":
     while True:
         class MyStreamListener(tweepy.StreamListener):
             def on_status(self, status):
+                global conta
                 global indice
                 if status.user.screen_name == "jairbolsonaro" and not "RT" in status.text:
                     try:
