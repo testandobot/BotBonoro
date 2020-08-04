@@ -35,7 +35,7 @@ if __name__ == "__main__":
                         print(e.reason)
                 else:
                   conta += 1
-                  if conta % 20:
+                  if conta % 10:
                     print("N")
                   
             
