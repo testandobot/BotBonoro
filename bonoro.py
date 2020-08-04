@@ -13,6 +13,7 @@ auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 indice = False
+conta = 0
 textos = ["Somos muito fãs do excelentíssimo Presidente @jairbolsonaro\nManda salve pro 3S2, mito", "Manda salve pro 3s2, Presidente @jairbolsonaro\nSomos fãs do mito"]
 print(api.me())        
                     
@@ -31,7 +32,12 @@ if __name__ == "__main__":
                         api.retweet(status.id)
                         indice = not indice
                     except tweepy.TweepError as e:
-                        print(e.reason)                  
+                        print(e.reason)
+                else:
+                  conta += 1
+                  if conta % 20:
+                    print("N")
+                  
             
         myStreamListener = MyStreamListener()
         myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
